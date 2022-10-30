@@ -47,7 +47,7 @@ exports.findOne = (req, res) => {
            res.redirect(data.url)
        }
        else {
-           res.redirect(`${config.clientURL}?e=404`)
+           res.redirect(`/?e=404`)
        }
     }).catch(err => {
         res.status(500).send({

@@ -56,7 +56,7 @@ if( errorQuery === "404"){
   // let them know
   alert("The requested link is unavailable.")
   // and redirect back to compress page
-  location.href = config.clientURL
+  location.href = location.origin
 }
 
 export default {

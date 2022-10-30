@@ -2,7 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const config = require("./config/config")
 
+const path = __dirname + "/views/"
 const app = express();
+
+app.use(express.static(path))
 
 const db = require("./models/db");
 db.sequelize.sync()
@@ -32,10 +35,14 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', function (req,res) {
+    res.sendFile(path + "index.html")
+});
+
 require("./routes/url.routes.js")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = 20069;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
