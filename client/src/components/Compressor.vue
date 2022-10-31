@@ -96,6 +96,7 @@ export default {
     copyOutput() {
       // copy text to clipboard
       navigator.clipboard.writeText(this.output_url)
+      // change button shortly to copied, to indicate that to the user
       const copyButton = document.getElementById("copy")
       copyButton.textContent = "Copied!"
       setTimeout(function() {

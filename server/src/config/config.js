@@ -1,5 +1,5 @@
 module.exports = {
     DBPATH: "./db/compressedUrls.db",
-    serverURL: "http://localhost:8080",
-    clientURL: "http://localhost:8081"
+    serverURL: "https://url-compressor.vani.ga",
+    clientURL: "https://url-compressor.vani.ga/"
 }

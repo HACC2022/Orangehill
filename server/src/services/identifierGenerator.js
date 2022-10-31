@@ -10,11 +10,13 @@ const base62 =
     ]
 
 exports.generateIdentifier = function () {
+    // just take a random char from the base62 array, do that six times and join the chars to a string - et voila!
     return Array.from({length:6}, (x,i) => {
         return base62[randomInt()]
     }).join("")
 }
 
 function randomInt() {
+    // so this only generates values between 0 and 61
     return Math.floor(Math.random() * 62)
 }

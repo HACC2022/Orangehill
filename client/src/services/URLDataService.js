@@ -7,6 +7,6 @@ export default class URLDataService {
     }
 
     static async create(data) {
-        return (await http.post('/', data, {params: data}));
+        return (await http.post('/', data, {params: data}))
     }
 }

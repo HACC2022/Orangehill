@@ -7,6 +7,7 @@ const URL = function (url) {
     this.short = url.short
 }
 
+// url data model
 module.exports = (sequelize, Sequelize) => {
     const URL = sequelize.define("URL", {
         url: {
@@ -22,10 +23,11 @@ module.exports = (sequelize, Sequelize) => {
         short: {
             type: Sequelize.STRING,
             allowNull: false,
+            // short 6-digit code has to be unique, so no collisions allowed in db
             unique: true
 
         }
-    });
+    })
 
-    return URL;
+    return URL
 };
