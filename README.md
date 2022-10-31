@@ -20,6 +20,7 @@ Otherwise, you can hit the button "Copy!" and the link will automatically be cop
 This is indicated by the buttons text changing to "Copied!" for two seconds.
 The website works on mobile devices as well - in portrait and landscape mode.
 
+To access the demo location simply click on the provided [link](https://url-compressor.vani.ga)
 
 ## How it works
 A URL Compressor works by mapping a long URL onto a shorter one.
