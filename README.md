@@ -1,6 +1,24 @@
 # Orangehill - URL Compressor
 
 ## How to use
+The website is divided into three major components - header, footer, and the main panel.
+The header includes the website's title and the logo (it's a logo, not a button).
+The footer provides a link to the GitHub repository.
+The main panel is the focus point of interaction.
+The first input line is for the URL that shall be compressed.
+It only takes valid URLs as input (include the `http://` or `https://`).
+The second field determines the time til this shortened link expires.
+The default value is 12 hours from once you hit compress on.
+It's a dropdown, and you have to select an option.
+The third field is limits the maximum number of uses for a link.
+This is set to "No limit" by default.
+If it is set to any other value, that link can only be used so many times.
+This is great for e.g. one-time access.
+Afterwards you just hit the "Compress URL!"-button and your link is generated.
+It will appear in the field "Compressed URL". If you click on it, it automatically selects the whole link.
+Otherwise, you can hit the button "Copy!" and the link will automatically be copied to your clipboard.
+This is indicated by the buttons text changing to "Copied!" for two seconds.
+The website works on mobile devices as well - in portrait and landscape mode.
 
 
 ## How it works
@@ -12,6 +30,9 @@ Furthermore, users have the option to set expiry dates for their links as well a
 ### Project structure
 For clarity the project has been divided into the client and server code.
 (Even though for deployment purposes the built client applications is bundled into the server.)
+This project follow the Model-view-controller (MVG) design pattern. 
+Usage of this pattern allows for easy extendability as well as improving readability - a place for everything, and everything in its place.
+
 
 #### Client
 The client code only handles the website as well as sending the users request for a new shortened link to the server.
