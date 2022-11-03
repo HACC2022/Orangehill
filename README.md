@@ -53,9 +53,9 @@ On redirect to the associated url the use count is diminished by one and the ent
 The following two sections describe two critical elements of the system in greater detail:
 
 ### Random ID
-To compress the URL we represent each site as a six char value in base64.
+To compress the URL we represent each site as a six char value in base62.
 This allows for up to `pow(62, 6) = 56,800,235,584` distinct addresses.
-Furthermore, base64 is still easily read- and typeable.
+Furthermore, base62 is still easily read- and typeable.
 Current estimations put the amount of websites globally at roughly 2 billion. So this is more than sufficient.
 Generation of these values is handled serverside to prevent tempering like intended collisions.
 To prevent cases of naturally occurring collisions after generation of a value a request for the associated redirect is
